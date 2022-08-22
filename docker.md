@@ -94,6 +94,7 @@ docker stop 83646325276
 docker run -p6000:6379 -d redis      .... -d detached mode
 docker ps    shows binding
 ```
+
 #### if container is running view logs 
 
 ```bash
@@ -108,7 +109,23 @@ docker run -d -p6001:6379 --name redis-older redis:4.0
 docker ps
 ```
 
+#### get terminal of running container
 
+```bash
+docker exec -it 83646325276 /bin/bash`
+or
+docker exec -it 83646325276 /bin/sh
+```
 
+#### docker run VS docker start
 
+docker run lanches a new container from the image specified
+
+docker start launches an exsisting container that was stoped
+
+`docker start 83646325276`
+
+this will run the container that was set up earlier with docker run and then stopped. note docker start will have all attribs that were created with docker run
+
+EOF
 
