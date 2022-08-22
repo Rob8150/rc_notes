@@ -37,7 +37,7 @@
 
 `docker container ls -a`
 
-#### see docker processes
+#### see docker running containers
 
 `docker ps`
 
@@ -74,5 +74,41 @@
 #### list even stopped containers
 
 `docker container ls -a`
+
+#### Docker run say redis detached
+
+`docker run -d redis`
+
+#### To restart a container that has been stopped
+
+```bash
+docker ps -a
+docker start 83646325276
+```
+
+#### bind containers to ports
+
+```bash
+docker stop 83646325276
+(not runnable )docker run -p[host:container_port] so this would look like
+docker run -p6000:6379 -d redis      .... -d detached mode
+docker ps    shows binding
+```
+#### if container is running view logs 
+
+```bash
+docker ps
+docker logs 83646325276
+```
+
+#### name your containers --name
+
+```bash
+docker run -d -p6001:6379 --name redis-older redis:4.0
+docker ps
+```
+
+
+
 
 
