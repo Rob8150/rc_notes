@@ -113,7 +113,7 @@ output
 
 #### Enter Mongosh with your username and password.
 
-sudo mongosh -u admin -p password
+`sudo mongosh -u admin -p password`
 
 #### Successfully authenticating, Mongosh prompts the following output.
 
